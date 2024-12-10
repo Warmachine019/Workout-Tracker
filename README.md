@@ -1,2 +1,2 @@
 # Workout-Tracker
-Workout tracker which uses natural launguage queries.
+Workout tracker in python which uses natural launguage queries.
