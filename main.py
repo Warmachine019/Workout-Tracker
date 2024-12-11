@@ -1,17 +1,18 @@
 import requests
 from datetime import datetime
+import os
 
-GENDER = "YOUR_GENDER"
-WEIGHT_KG = "YOUR_WEIGHT"
-HEIGHT_CM = "YOUR_HEIGHT"
-AGE = "YOUR_AGE"
+GENDER = "male"
+WEIGHT_KG = "69"
+HEIGHT_CM = "180"
+AGE = "19"
 
-APP_ID = "YOUR NUTRITIONIX_APP_ID"
-API_KEY = "YOUR NUTRITIONIX_API_KEY"
-SHEETY_AUTHORISATION = "YOUR_SHEETEY-AUTH-CODE"
+APP_ID = os.environ.get("NUTRI_APP_ID")
+API_KEY = os.environ.get("NUTRI_API_KEY")
+SHEETY_AUTHORISATION = os.environ.get("SHEETY_AUTH_KEY")
 
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
-sheety_endpoint = "YOUR_SHEETY_ENDPOINT"
+sheety_endpoint = os.environ.get("SHEETY_END_POINT")
 
 exercise_text = input("What did you do today: ")
 
